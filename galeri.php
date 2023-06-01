@@ -25,10 +25,10 @@
     <nav class="navbar">
       <a href="#" class="navbar-hidden">Logo</a>
       <div class="navbar-nav">
-        <a href="#">Beranda</a>
-        <a href="#">Lokasi</a>
-        <a href="#">Galeri</a>
-        <a href="#">Ulasan</a>
+        <a href="index.php#home">Beranda</a>
+        <a href="index.php#tempat">Lokasi</a>
+        <a href="index.php#galery">Galeri</a>
+        <a href="index.php#ulasan">Ulasan</a>
       </div>
       <div class="navbar-extra">
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
