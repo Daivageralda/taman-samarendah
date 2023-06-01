@@ -1,0 +1,333 @@
+:root {
+  --primary: #02aed1;
+  --success: #6c9b07;
+  --info: #117cff;
+  --warning: #ffc907;
+  --danger: #ff2d26;
+  --neutral: #ffffff;
+  --text: #202020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--neutral);
+  color: var(--text);
+  /* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: transparent; /* Mengatur latar belakang awal menjadi transparan */
+  color: var(--neutral);
+  transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi untuk smooth effect */
+}
+
+.navbar-scrolled {
+  background-color: var(--neutral); /* Mengatur warna latar belakang menjadi putih saat di-scroll */
+  color: black; /* Mengatur warna teks menjadi hitam saat di-scroll */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navbar-hidden {
+  visibility: hidden;
+}
+
+.navbar .navbar-nav a {
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--neutral);
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 0.8rem;
+  margin-top: 3%;
+  position: relative; /* Menjadikan posisi elemen <a> menjadi relative */
+}
+.navbar-nav a.active {
+  color: var(--neutral); /* Ganti dengan warna yang diinginkan saat elemen <a> aktif */
+}
+.navbar-nav a.active::after {
+  border-bottom: 0.3rem solid var(--neutral); /* Replace with the desired color for the border-bottom */
+  transform: scaleX(1);
+}
+
+.navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.3rem solid transparent;
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  border-bottom-color: var(--neutral); /* Mengubah warna border-bottom menjadi warna teks */
+  transform: scaleX(1);
+}
+
+.navbar-scrolled .navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.3rem solid transparent; /* Mengatur awal border-bottom menjadi transparan */
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar-scrolled .navbar .navbar-nav a:hover::after {
+  border-bottom-color: var(--text); /* Mengubah warna border-bottom menjadi warna teks */
+  transform: scaleX(1);
+}
+.navbar .navbar-nav a.navbar-link-scrolled::after {
+  border-bottom-color: var(--text); /* Mengubah warna border-bottom menjadi warna teks saat di-scroll */
+}
+
+.navbar .navbar-extra a {
+  color: var(--text);
+  margin: 0 0.5rem;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Action */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero .content {
+  color: var(--neutral);
+  margin-left: 40%;
+  margin-top: 5%;
+  text-align: center;
+  padding: 1.4rem 9%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-weight: 500;
+  font-size: 3em;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content p {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../img/mainheader.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+#particles-js canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* Ulasan */
+.review {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review .content {
+  margin-top: 1%;
+  position: relative;
+}
+.review .content h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.review .content h1::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.3rem solid black;
+  transform: scaleX(0.1);
+}
+
+.slide-content {
+  padding: 10px 10px;
+  margin: 10px 40px;
+  overflow: hidden;
+}
+.card-wrapper {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.card {
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.7);
+  width: 350px;
+  height: 350px;
+  border-radius: 25px;
+  background-color: var(--neutral);
+}
+.image-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+  height: 190px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+  height: 200px;
+}
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #555555;
+  border-radius: 25px 25px 25px 25px;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--text);
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+.description {
+  font-size: 14px;
+  text-align: center;
+}
+/* galery */
+.galeri {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  margin-top: 5%;
+  max-width: 960px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.image-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #202020;
+  text-align: center;
+  padding: 1rem 0 2.4rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  margin: 1rem;
+  color: var(--neutral);
+}
+
+footer .socials a:hover {
+  color: #555555;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--neutral);
+  padding: 0.7rem 1rem;
+}
+footer .links a:hover {
+  color: #555555;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  color: #555555;
+}
+
+footer .credit a {
+  color: var(--neutral);
+  font-weight: 700;
+}
