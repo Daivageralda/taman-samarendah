@@ -16,7 +16,9 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/galerystyle.css" />
 
-    <title>Biduk-Biduk</title>
+    <!-- Icon & Title -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Galeri</title>
   </head>
   <body>
     <!-- Navbar Start -->
